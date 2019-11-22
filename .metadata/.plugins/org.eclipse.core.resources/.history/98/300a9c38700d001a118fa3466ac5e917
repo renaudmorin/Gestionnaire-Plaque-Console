@@ -1,0 +1,143 @@
+/*
+ * Camion_Testeur.cpp
+ *
+ *  Created on: Nov 22, 2019
+ *      Author: etudiant
+ */
+#include <gtest/gtest.h>
+#include "Camion.h"
+using namespace saaq;
+using namespace std;
+util::Date uneDate;
+
+/**
+ * \brief Test du Constructeur Camion(int p_poids, int p_nbEssieux, std::string& p_niv, std::string p_immatriculation, util::Date& p_dateEnregistrement);
+ *        cas valide:
+ *				      p_poids > 3000
+ *				      p_nbEssieux >=2
+ *				      p_immatriculation valide
+ *        cas invalides:
+ *        			  p_poids <=3000
+ *                    p_nbEssieux <2
+ *
+ */
+TEST(Camion, ConstructeurAvecParametreValide)
+{
+	Camion testCamion(3500, 7, "3VWFE21C04M000001", "L000000", uneDate);
+	ASSERT_EQ(3500, testCamion.reqPoids());
+	ASSERT_EQ(7, testCamion.req_NbEssieux());
+	ASSERT_EQ("L000000",testCamion.reqImmatriculation());
+	ASSERT_EQ(true, util::Date::validerDate(uneDate.reqJour(), uneDate.reqMois(), uneDate.reqAnnee()));
+}
+
+/**
+ * \brief Test du poid invalide du Camion
+ *        cas invalides:
+ *                     p_poids <=3000
+ */
+TEST(Camion, ConstructeurAvecPoidInvalide)
+{
+	ASSERT_THROW(Camion testCamion(0, 7, "3VWFE21C04M000001", "IFT 006", uneDate), PreconditionException);
+}
+
+/**
+ * \brief Test du nombre d'essieux invalide du Camion
+ *        cas invalides:
+ *                     p_nbEssieux <=2
+ */
+TEST(Camion, ConstructeurAvecEssieuxInvalide)
+{
+	ASSERT_THROW(Camion testCamion(3500, 1, "3VWFE21C04M000001", "IFT 006", uneDate), PreconditionException);
+}
+
+/** \class unCamion
+ *  \Fixture unCamion pour la création d'un Camion pour les tests
+ */
+class unCamion: public ::testing::Test
+{
+public:
+	unCamion() : t_Camion(3500, 7, "3VWFE21C04M000001", "L000000", uneDate){};
+	Camion t_Camion;
+};
+
+/** \brief Test de la méthode reqPoids
+ *   Cas valide : le Poids doit être égal au Poids
+ *   Cas invalide : si il est mal assigne
+ */
+TEST_F(unCamion, reqPoids)
+{
+	ASSERT_EQ(3500, t_Camion.reqPoids());
+}
+
+/** \brief Test de la méthode req_NbEssieux
+ *   Cas valide : le NbEssieux doit être égal au NbEssieux
+ *   Cas invalide : si il est mal assigne
+ */
+TEST_F(unCamion, req_NbEssieux)
+{
+	ASSERT_EQ(7 , t_Camion.req_NbEssieux());
+}
+
+/** \brief Test de la méthode tarificationAnnuelle
+ *   Cas valide : la tarification doit être égal 3729.76
+ *   Cas invalide : si il est mal assigne
+ */
+TEST_F(unCamion, tarificationAnnuelle)
+{
+	ASSERT_EQ(3729.76, t_Camion.tarificationAnnuelle());
+}
+
+/**
+ * \brief Test de la méthode virtuelle Vehicule* clone() const
+ *        cas valides:
+ *                cloneVehicule :vérification que le clone possède les mêmes attributs que vehicule
+ *
+ *                cloneVehiculePointeur : Vérification que le pointeur du vehicule et son clone n'ont pas la meme adresse
+ *
+ */
+TEST_F(unCamion, cloneCamion)
+{
+	Vehicule* clone = t_Camion.clone();
+	ASSERT_EQ(t_Camion.tarificationAnnuelle(), clone->tarificationAnnuelle());
+    ASSERT_EQ(t_Camion.reqNiv(), clone->reqNiv());
+    ASSERT_EQ(t_Camion.reqImmatriculation(), clone->reqImmatriculation());
+    ASSERT_EQ(t_Camion.reqDateEnregistrement(), clone->reqDateEnregistrement());
+    ASSERT_EQ(t_Camion.reqVehiculeFormate(), clone->reqVehiculeFormate());
+}
+
+TEST_F(unCamion, cloneCamionPointeur)
+{
+    Vehicule* clone = t_Camion.clone();
+    Camion* cloneCamionPointeur = &t_Camion;
+    ASSERT_NE(cloneCamionPointeur, clone);
+}
+
+/**
+ * \test Test de la méthode std::string reqVehiculeFormate();
+ *
+ *        Cas valides: vérifier le retour des information sur l'objets Vehicule formaté
+ *        Cas invalides: aucun
+ */
+
+TEST_F(unCamion,reqVehiculeFormate)
+{
+
+
+
+	ostringstream os;
+	os << "Numero de serie          : " << v_vehiculePromenade.reqNiv() << endl;
+	os << "Numero d’immatriculation : " << v_vehiculePromenade.reqImmatriculation() << endl;
+	os << "Date d’enregistrement    : " << v_vehiculePromenade.reqDateEnregistrement().reqDateFormatee() << endl;
+	os << "Nombre d'essieux : "<<t_Camion.req_NbEssieux() << endl;
+	os << "Poids : "<< t_Camion.reqPoids() <<" kg" << endl;
+	os << "Tarif : "<<t_Camion.tarificationAnnuelle() << "$"<< endl;
+
+	ASSERT_EQ(os.str(), v_vehiculePromenade.reqVehiculeFormate());
+}
+
+
+
+
+
+
+

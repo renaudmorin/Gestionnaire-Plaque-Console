@@ -1,0 +1,195 @@
+\hypertarget{classsaaq_1_1Camion}{}\section{saaq\+:\+:Camion Class Reference}
+\label{classsaaq_1_1Camion}\index{saaq\+::\+Camion@{saaq\+::\+Camion}}
+
+
+Classe \hyperlink{classsaaq_1_1Camion}{Camion} qui contient les informations sur un \hyperlink{classsaaq_1_1Camion}{Camion} Contient la plaque d\textquotesingle{}immatriculation, la date d\textquotesingle{}enregistrement, le poid, le nombre d\textquotesingle{}essieu et le N\+IV du camion. Des méthode qui permettent de nous donner chaques valeurs. Une méthode qui permet d\textquotesingle{}assigner une nouvelle plaque de camion. Une méthode qui permet d\textquotesingle{}afficher le tout dans un format console.  
+
+
+
+
+{\ttfamily \#include $<$Camion.\+h$>$}
+
+
+
+Inheritance diagram for saaq\+:\+:Camion\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{classsaaq_1_1Camion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for saaq\+:\+:Camion\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{classsaaq_1_1Camion__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsaaq_1_1Camion_ab81877c7ca4c636c4488c09a6b7fabba}{Camion} (const int p\+\_\+poids, const int p\+\_\+nb\+Essieux, const std\+::string \&p\+\_\+niv, const std\+::string p\+\_\+immatriculation, \hyperlink{classutil_1_1Date}{util\+::\+Date} \&p\+\_\+date\+Enregistrement)
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}un nouvel objet de la classe \hyperlink{classsaaq_1_1Camion}{Camion}. \end{DoxyCompactList}\item 
+const int \hyperlink{classsaaq_1_1Camion_ab024fec200c2aa4484645da93155cdd2}{req\+Poids} () const
+\begin{DoxyCompactList}\small\item\em Retourne le poid du camion. \end{DoxyCompactList}\item 
+const int \hyperlink{classsaaq_1_1Camion_aeac12d82162c95755096025f93c8ddb7}{req\+\_\+\+Nb\+Essieux} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nombre d\textquotesingle{}essieux du camion. \end{DoxyCompactList}\item 
+double \hyperlink{classsaaq_1_1Camion_af01bdc48db3cdeb3bc29c8b864ffdad8}{tarification\+Annuelle} () const
+\begin{DoxyCompactList}\small\item\em Retourne la tarification annuelle du camion. \end{DoxyCompactList}\item 
+void \hyperlink{classsaaq_1_1Camion_aff39f0171afe70b4a9168ebefba775b5}{asg\+Immatriculation} (const std\+::string \&p\+\_\+immatriculation)
+\begin{DoxyCompactList}\small\item\em Assigne une nouvelle plaque automobile au camion. \end{DoxyCompactList}\item 
+virtual \hyperlink{classsaaq_1_1Vehicule}{Vehicule} $\ast$ \hyperlink{classsaaq_1_1Camion_aa4fe639e82878acf3fe578a8d80870d4}{clone} () const
+\begin{DoxyCompactList}\small\item\em Retourne un clone de l\textquotesingle{}objet du camion. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classsaaq_1_1Camion_a7e352c9d011c145497fa19d16482bd9a}{req\+Vehicule\+Formate} () const
+\begin{DoxyCompactList}\small\item\em Retourne une string contenant les informations du camion de maniere formate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe \hyperlink{classsaaq_1_1Camion}{Camion} qui contient les informations sur un \hyperlink{classsaaq_1_1Camion}{Camion} Contient la plaque d\textquotesingle{}immatriculation, la date d\textquotesingle{}enregistrement, le poid, le nombre d\textquotesingle{}essieu et le N\+IV du camion. Des méthode qui permettent de nous donner chaques valeurs. Une méthode qui permet d\textquotesingle{}assigner une nouvelle plaque de camion. Une méthode qui permet d\textquotesingle{}afficher le tout dans un format console. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsaaq_1_1Camion_ab81877c7ca4c636c4488c09a6b7fabba}\label{classsaaq_1_1Camion_ab81877c7ca4c636c4488c09a6b7fabba}} 
+\index{saaq\+::\+Camion@{saaq\+::\+Camion}!Camion@{Camion}}
+\index{Camion@{Camion}!saaq\+::\+Camion@{saaq\+::\+Camion}}
+\subsubsection{\texorpdfstring{Camion()}{Camion()}}
+{\footnotesize\ttfamily saaq\+::\+Camion\+::\+Camion (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+poids,  }\item[{const int}]{p\+\_\+nb\+Essieux,  }\item[{const std\+::string \&}]{p\+\_\+niv,  }\item[{const std\+::string}]{p\+\_\+immatriculation,  }\item[{\hyperlink{classutil_1_1Date}{util\+::\+Date} \&}]{p\+\_\+date\+Enregistrement }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}un nouvel objet de la classe \hyperlink{classsaaq_1_1Camion}{Camion}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+poids} & poid du camion \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+nb\+Essieux} & nombre d\textquotesingle{}essieux \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+niv} & N\+IV du vehicule \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+immatriculation} & immatriculation du vehicule \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+date\+Enregistrement} & date d\textquotesingle{}enregistrement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+immatriculation est une plaque de camion 
+
+p\+\_\+poids est valide (plus grand que 3000) 
+
+p\+\_\+nb\+Essieux est valide (plus que 2 essieux) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+m\+\_\+poids prend la valeur de p\+\_\+poids 
+
+m\+\_\+nb\+Essieux prend la valeur de p\+\_\+nb\+Essieux 
+\end{DoxyPostcond}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsaaq_1_1Camion_aff39f0171afe70b4a9168ebefba775b5}\label{classsaaq_1_1Camion_aff39f0171afe70b4a9168ebefba775b5}} 
+\index{saaq\+::\+Camion@{saaq\+::\+Camion}!asg\+Immatriculation@{asg\+Immatriculation}}
+\index{asg\+Immatriculation@{asg\+Immatriculation}!saaq\+::\+Camion@{saaq\+::\+Camion}}
+\subsubsection{\texorpdfstring{asg\+Immatriculation()}{asgImmatriculation()}}
+{\footnotesize\ttfamily void saaq\+::\+Camion\+::asg\+Immatriculation (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+immatriculation }\end{DoxyParamCaption})}
+
+
+
+Assigne une nouvelle plaque automobile au camion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+immatriculation} & est la nouvelle plaque du camion qui est valide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+immatriculation correspond a une plaque automobile valide 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+la nouvelle plaque a été assigné correctement 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classsaaq_1_1Camion_aa4fe639e82878acf3fe578a8d80870d4}\label{classsaaq_1_1Camion_aa4fe639e82878acf3fe578a8d80870d4}} 
+\index{saaq\+::\+Camion@{saaq\+::\+Camion}!clone@{clone}}
+\index{clone@{clone}!saaq\+::\+Camion@{saaq\+::\+Camion}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \hyperlink{classsaaq_1_1Vehicule}{Vehicule} $\ast$ saaq\+::\+Camion\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne un clone de l\textquotesingle{}objet du camion. 
+
+\begin{DoxyReturn}{Returns}
+une copie du camion 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsaaq_1_1Vehicule}{saaq\+::\+Vehicule}.
+
+\mbox{\Hypertarget{classsaaq_1_1Camion_aeac12d82162c95755096025f93c8ddb7}\label{classsaaq_1_1Camion_aeac12d82162c95755096025f93c8ddb7}} 
+\index{saaq\+::\+Camion@{saaq\+::\+Camion}!req\+\_\+\+Nb\+Essieux@{req\+\_\+\+Nb\+Essieux}}
+\index{req\+\_\+\+Nb\+Essieux@{req\+\_\+\+Nb\+Essieux}!saaq\+::\+Camion@{saaq\+::\+Camion}}
+\subsubsection{\texorpdfstring{req\+\_\+\+Nb\+Essieux()}{req\_NbEssieux()}}
+{\footnotesize\ttfamily const int saaq\+::\+Camion\+::req\+\_\+\+Nb\+Essieux (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le nombre d\textquotesingle{}essieux du camion. 
+
+\begin{DoxyReturn}{Returns}
+le nombre d\textquotesingle{}essieux 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaaq_1_1Camion_ab024fec200c2aa4484645da93155cdd2}\label{classsaaq_1_1Camion_ab024fec200c2aa4484645da93155cdd2}} 
+\index{saaq\+::\+Camion@{saaq\+::\+Camion}!req\+Poids@{req\+Poids}}
+\index{req\+Poids@{req\+Poids}!saaq\+::\+Camion@{saaq\+::\+Camion}}
+\subsubsection{\texorpdfstring{req\+Poids()}{reqPoids()}}
+{\footnotesize\ttfamily const int saaq\+::\+Camion\+::req\+Poids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le poid du camion. 
+
+\begin{DoxyReturn}{Returns}
+poid du camion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaaq_1_1Camion_a7e352c9d011c145497fa19d16482bd9a}\label{classsaaq_1_1Camion_a7e352c9d011c145497fa19d16482bd9a}} 
+\index{saaq\+::\+Camion@{saaq\+::\+Camion}!req\+Vehicule\+Formate@{req\+Vehicule\+Formate}}
+\index{req\+Vehicule\+Formate@{req\+Vehicule\+Formate}!saaq\+::\+Camion@{saaq\+::\+Camion}}
+\subsubsection{\texorpdfstring{req\+Vehicule\+Formate()}{reqVehiculeFormate()}}
+{\footnotesize\ttfamily std\+::string saaq\+::\+Camion\+::req\+Vehicule\+Formate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne une string contenant les informations du camion de maniere formate. 
+
+\begin{DoxyReturn}{Returns}
+informations du camion de maniere formate 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classsaaq_1_1Vehicule_a9d0ff95273ecd7858cf9bd12aac359ba}{saaq\+::\+Vehicule}.
+
+\mbox{\Hypertarget{classsaaq_1_1Camion_af01bdc48db3cdeb3bc29c8b864ffdad8}\label{classsaaq_1_1Camion_af01bdc48db3cdeb3bc29c8b864ffdad8}} 
+\index{saaq\+::\+Camion@{saaq\+::\+Camion}!tarification\+Annuelle@{tarification\+Annuelle}}
+\index{tarification\+Annuelle@{tarification\+Annuelle}!saaq\+::\+Camion@{saaq\+::\+Camion}}
+\subsubsection{\texorpdfstring{tarification\+Annuelle()}{tarificationAnnuelle()}}
+{\footnotesize\ttfamily double saaq\+::\+Camion\+::tarification\+Annuelle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne la tarification annuelle du camion. 
+
+\begin{DoxyReturn}{Returns}
+tarification annuelle du camion 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsaaq_1_1Vehicule_a93570921069d25b6bc48cf04af176395}{saaq\+::\+Vehicule}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Camion_8h}{Camion.\+h}\item 
+\hyperlink{Camion_8cpp}{Camion.\+cpp}\end{DoxyCompactItemize}

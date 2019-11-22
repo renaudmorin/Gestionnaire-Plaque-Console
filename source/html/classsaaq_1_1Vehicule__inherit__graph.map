@@ -1,0 +1,4 @@
+<map id="saaq::Vehicule" name="saaq::Vehicule">
+<area shape="rect" id="node2" href="$classsaaq_1_1Camion.html" title="Classe Camion qui contient les informations sur un Camion Contient la plaque d&#39;immatriculation, la date d&#39;enregistrement, le poid, le nombre d&#39;essieu et le NIV du camion. Des méthode qui permettent de nous donner chaques valeurs. Une méthode qui permet d&#39;assigner une nouvelle plaque de camion. Une méthode qui permet d&#39;afficher le tout dans un format console. " alt="" coords="5,80,108,107"/>
+<area shape="rect" id="node3" href="$classsaaq_1_1VehiculePromenade.html" title="Classe VehiculePromenade qui contient les informations sur un Vehicule de Promenade Contient la plaqu..." alt="" coords="132,80,307,107"/>
+</map>

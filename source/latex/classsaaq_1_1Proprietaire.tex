@@ -1,0 +1,120 @@
+\hypertarget{classsaaq_1_1Proprietaire}{}\section{saaq\+:\+:Proprietaire Class Reference}
+\label{classsaaq_1_1Proprietaire}\index{saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}}
+
+
+Classe \hyperlink{classsaaq_1_1Proprietaire}{Proprietaire} qui contient les Camions et \hyperlink{classsaaq_1_1Vehicule}{Vehicule} de promenade -\/\+Accesseurs pour tous ses attributs -\/\+Assigner une nouvelle plaque automobile -\/\+Une methode qui retourne le tout de facon formate.  
+
+
+
+
+{\ttfamily \#include $<$Proprietaire.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsaaq_1_1Proprietaire_af70905a8a13010db6d3b88f1f9ad5ffd}{Proprietaire} (const std\+::string \&p\+\_\+nom, const std\+::string \&p\+\_\+prenom)
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}un nouvel objet de la classe \hyperlink{classsaaq_1_1Proprietaire}{Proprietaire}. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classsaaq_1_1Proprietaire_aed34cc351d73ce99c9cccc24badc2191}{req\+Nom} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nom du proprietaire. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classsaaq_1_1Proprietaire_a12480a6a2c063c3447df4e334960d7c6}{req\+Prenom} () const
+\begin{DoxyCompactList}\small\item\em Retourne le prenom du proprietaire. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classsaaq_1_1Proprietaire_a808b18e9e9a6b1d3b7f24e78769c0474}{req\+Proprietaire\+Formate} () const
+\begin{DoxyCompactList}\small\item\em Retourne string contenant les informations des vehicules des proprietaire. \end{DoxyCompactList}\item 
+void \hyperlink{classsaaq_1_1Proprietaire_aa6f1af7fa9ee650bc96ff414c7923c49}{ajouter\+Vehicule} (const \hyperlink{classsaaq_1_1Vehicule}{Vehicule} \&p\+\_\+nouveau\+Vehicule)
+\begin{DoxyCompactList}\small\item\em Permet l\textquotesingle{}ajout d\textquotesingle{}un \hyperlink{classsaaq_1_1Vehicule}{Vehicule} (\hyperlink{classsaaq_1_1Camion}{Camion} ou Promenade) au proprietaire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe \hyperlink{classsaaq_1_1Proprietaire}{Proprietaire} qui contient les Camions et \hyperlink{classsaaq_1_1Vehicule}{Vehicule} de promenade -\/\+Accesseurs pour tous ses attributs -\/\+Assigner une nouvelle plaque automobile -\/\+Une methode qui retourne le tout de facon formate. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsaaq_1_1Proprietaire_af70905a8a13010db6d3b88f1f9ad5ffd}\label{classsaaq_1_1Proprietaire_af70905a8a13010db6d3b88f1f9ad5ffd}} 
+\index{saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}!Proprietaire@{Proprietaire}}
+\index{Proprietaire@{Proprietaire}!saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}}
+\subsubsection{\texorpdfstring{Proprietaire()}{Proprietaire()}}
+{\footnotesize\ttfamily saaq\+::\+Proprietaire\+::\+Proprietaire (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+nom,  }\item[{const std\+::string \&}]{p\+\_\+prenom }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}un nouvel objet de la classe \hyperlink{classsaaq_1_1Proprietaire}{Proprietaire}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+nom} & nom du proprietaire \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+prenom} & prenom du proprietaire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+nom est un nom valide 
+
+p\+\_\+prenom est un prenom valide 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+m\+\_\+nom prend la valeur de p\+\_\+nom 
+
+m\+\_\+prenom prend la valeur de p\+\_\+prenom 
+\end{DoxyPostcond}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsaaq_1_1Proprietaire_aa6f1af7fa9ee650bc96ff414c7923c49}\label{classsaaq_1_1Proprietaire_aa6f1af7fa9ee650bc96ff414c7923c49}} 
+\index{saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}!ajouter\+Vehicule@{ajouter\+Vehicule}}
+\index{ajouter\+Vehicule@{ajouter\+Vehicule}!saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}}
+\subsubsection{\texorpdfstring{ajouter\+Vehicule()}{ajouterVehicule()}}
+{\footnotesize\ttfamily void saaq\+::\+Proprietaire\+::ajouter\+Vehicule (\begin{DoxyParamCaption}\item[{const \hyperlink{classsaaq_1_1Vehicule}{Vehicule} \&}]{p\+\_\+nouveau\+Vehicule }\end{DoxyParamCaption})}
+
+
+
+Permet l\textquotesingle{}ajout d\textquotesingle{}un \hyperlink{classsaaq_1_1Vehicule}{Vehicule} (\hyperlink{classsaaq_1_1Camion}{Camion} ou Promenade) au proprietaire. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+nouveau\+Vehicule} & Objet de type \hyperlink{classsaaq_1_1Vehicule}{Vehicule} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaaq_1_1Proprietaire_aed34cc351d73ce99c9cccc24badc2191}\label{classsaaq_1_1Proprietaire_aed34cc351d73ce99c9cccc24badc2191}} 
+\index{saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}!req\+Nom@{req\+Nom}}
+\index{req\+Nom@{req\+Nom}!saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}}
+\subsubsection{\texorpdfstring{req\+Nom()}{reqNom()}}
+{\footnotesize\ttfamily const std\+::string \& saaq\+::\+Proprietaire\+::req\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le nom du proprietaire. 
+
+\begin{DoxyReturn}{Returns}
+nom du proprietaire 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaaq_1_1Proprietaire_a12480a6a2c063c3447df4e334960d7c6}\label{classsaaq_1_1Proprietaire_a12480a6a2c063c3447df4e334960d7c6}} 
+\index{saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}!req\+Prenom@{req\+Prenom}}
+\index{req\+Prenom@{req\+Prenom}!saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}}
+\subsubsection{\texorpdfstring{req\+Prenom()}{reqPrenom()}}
+{\footnotesize\ttfamily const std\+::string \& saaq\+::\+Proprietaire\+::req\+Prenom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le prenom du proprietaire. 
+
+\begin{DoxyReturn}{Returns}
+prenom du proprietaire 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaaq_1_1Proprietaire_a808b18e9e9a6b1d3b7f24e78769c0474}\label{classsaaq_1_1Proprietaire_a808b18e9e9a6b1d3b7f24e78769c0474}} 
+\index{saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}!req\+Proprietaire\+Formate@{req\+Proprietaire\+Formate}}
+\index{req\+Proprietaire\+Formate@{req\+Proprietaire\+Formate}!saaq\+::\+Proprietaire@{saaq\+::\+Proprietaire}}
+\subsubsection{\texorpdfstring{req\+Proprietaire\+Formate()}{reqProprietaireFormate()}}
+{\footnotesize\ttfamily std\+::string saaq\+::\+Proprietaire\+::req\+Proprietaire\+Formate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne string contenant les informations des vehicules des proprietaire. 
+
+\begin{DoxyReturn}{Returns}
+informations des vehicules des proprietaire 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Proprietaire_8h}{Proprietaire.\+h}\item 
+\hyperlink{Proprietaire_8cpp}{Proprietaire.\+cpp}\end{DoxyCompactItemize}

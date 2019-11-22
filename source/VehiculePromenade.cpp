@@ -1,0 +1,106 @@
+/**
+ * \file VehiculePromenade.cpp
+ * \brief Fichier d'implementation de la classe VehiculePromenade
+ * \date 2019-11-15
+ * \author Renaud Morin
+ */
+#include "Vehicule.h"
+#include "VehiculePromenade.h"
+#include "ContratException.h"
+#include "Date.h"
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+namespace saaq{
+/**
+ * \brief constructeur avec paramètres
+ *           On construit un objet VehiculePromenade a partir de valeurs passées en paramètres.
+ * \param[in] p_nbPlaces est une le nombre de place du vehicule de promenade
+ * \param[in] p_niv NIV du vehicule
+ * \param[in] p_immatriculation immatriculation du vehicule
+ * \param[in] p_dateEnregistrement date d'enregistrement
+ * \pre Le nombre de place est plus grand que 0
+ * \pre L'immatriculation de promenade est valide
+ * \pre Le Niv est valide
+ * \pre La Date est valide
+ * \post m_nbPlaces prend la valeur de p_nbPlaces
+ */
+VehiculePromenade::VehiculePromenade::VehiculePromenade(const int p_nbPlaces, const std::string& p_niv,
+		const std::string p_immatriculation, util::Date& p_dateEnregistrement) :
+		Vehicule(p_niv, p_immatriculation, p_dateEnregistrement), m_nbPlaces(p_nbPlaces)
+	{
+		PRECONDITION(p_nbPlaces > 0);
+		PRECONDITION(util::validerImmatriculationPromenade(p_immatriculation));
+		PRECONDITION(util::validerNiv(p_niv));
+		PRECONDITION(util::Date::validerDate(p_dateEnregistrement.reqJour(), p_dateEnregistrement.reqMois(), p_dateEnregistrement.reqAnnee()));
+
+		POSTCONDITION(m_nbPlaces == p_nbPlaces)
+
+		INVARIANTS();
+	}
+
+	/**
+	 * \brief Assigne une nouvelle plaque automobile de promenade
+	 * \param[in] p_immatriculation est la nouvelle plaque automobile de promenade qui est valide
+	 * \pre p_immatriculation correspond a une plaque automobile valide
+	 * \post m_immatriculation prend la veleur de p_immatriculation
+	 * \post p_immatriculation est valide
+	 */
+	void VehiculePromenade::asgImmatriculation(const string& p_immatriculation)
+	{
+		PRECONDITION(util::validerImmatriculationPromenade(p_immatriculation));
+		Vehicule::asgImmatriculation(p_immatriculation);
+		POSTCONDITION(Vehicule::reqImmatriculation() == p_immatriculation);
+		POSTCONDITION(util::validerImmatriculationPromenade(p_immatriculation));
+		INVARIANTS();
+	}
+
+	/**
+	 * \brief Retourne le nombre de place du vehicule de promenade
+	 * \return le nombre de place du vehicule de promenade
+	 */
+	const int VehiculePromenade::req_nbPlaces() const
+	{
+		return m_nbPlaces;
+	}
+
+	/**
+	 * \brief Retourne la tarification Annuelle du vehicule de promenade
+	 * \return la tarification Annuelle du vehicule de promenade
+	 */
+	double VehiculePromenade::tarificationAnnuelle() const
+	{
+		return 224.04;
+	}
+
+	/**
+	 * \brief Retourne un clone de l'objet VehiculePromenade
+	 * \return une copie de VehiculePromenade
+	*/
+	Vehicule* VehiculePromenade::clone() const
+	{
+		return new VehiculePromenade(*this);  // Appel du constructeur copie
+	}
+
+	/**
+	 * \brief Retourne une string contenant les informations contenues pour un Vehicule de Promenade
+	 * \return informations de VehiculePromenade
+	*/
+	std::string VehiculePromenade::reqVehiculeFormate() const
+	{
+		ostringstream os;
+		os << Vehicule::reqVehiculeFormate();
+		os << "Nombre de places : "<<VehiculePromenade::req_nbPlaces() << endl;
+		os << "Tarif : "<<VehiculePromenade::tarificationAnnuelle() << "$"<< endl;
+		return os.str();
+	}
+
+	void VehiculePromenade::verifieInvariant() const
+	{
+		INVARIANT(m_nbPlaces > 0);
+
+	}
+
+
+}/* namespace saaq */

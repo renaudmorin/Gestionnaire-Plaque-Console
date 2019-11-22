@@ -1,0 +1,66 @@
+/**
+ * \file Vehicule.h
+ * \brief Fichier déclaration de la classe Vehicule
+ * \date 2019-10-15
+ * \author Renaud Morin
+ */
+
+#ifndef VEHICULE_H_
+#define VEHICULE_H_
+
+#include <string>
+#include "Date.h"
+#include "validationFormat.h"
+#include "ContratException.h"
+namespace saaq{
+
+/**
+ * \class Vehicule
+ * \brief Classe vehicule qui contient les informations d'une plaque automobile.
+ *        Contient la plaque d'immatriculation, la date d'enregistrement et le NIV du vehicule.
+ *        Des méthode qui permettent de nous donner chaques valeurs.
+ *        Une méthode qui permet d'assigner une nouvelle plaque de vehicule.
+ *        Une méthode qui permet d'afficher le tout dans un format console.
+ *
+ */
+class Vehicule
+{
+public:
+	Vehicule(const std::string& p_niv, const std::string& p_immatriculation, util::Date& p_dateEnregistrement);
+	virtual ~Vehicule() {};
+	virtual Vehicule* clone() const=0;
+	virtual double tarificationAnnuelle() const=0;
+	//getters
+	const std::string& reqNiv() const;
+	const std::string& reqImmatriculation() const;
+	const util::Date reqDateEnregistrement() const;
+	virtual std::string reqVehiculeFormate() const=0;
+	//surcharges
+	bool operator==(const Vehicule& p_vehicule) const;
+
+
+private:
+	std::string m_niv;
+	std::string m_immatriculation;
+	util::Date m_dateEnregistrement;
+	void verifieInvariant() const;
+
+protected:
+	void asgImmatriculation(const std::string& p_immatriculation);
+
+
+
+
+
+
+
+
+
+};
+
+}
+
+
+
+
+#endif /* VEHICULE_H_ */

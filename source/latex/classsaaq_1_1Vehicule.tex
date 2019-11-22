@@ -1,0 +1,204 @@
+\hypertarget{classsaaq_1_1Vehicule}{}\section{saaq\+:\+:Vehicule Class Reference}
+\label{classsaaq_1_1Vehicule}\index{saaq\+::\+Vehicule@{saaq\+::\+Vehicule}}
+
+
+Classe vehicule qui contient les informations d\textquotesingle{}une plaque automobile. Contient la plaque d\textquotesingle{}immatriculation, la date d\textquotesingle{}enregistrement et le N\+IV du vehicule. Des méthode qui permettent de nous donner chaques valeurs. Une méthode qui permet d\textquotesingle{}assigner une nouvelle plaque de vehicule. Une méthode qui permet d\textquotesingle{}afficher le tout dans un format console.  
+
+
+
+
+{\ttfamily \#include $<$Vehicule.\+h$>$}
+
+
+
+Inheritance diagram for saaq\+:\+:Vehicule\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classsaaq_1_1Vehicule__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsaaq_1_1Vehicule_a20f052188538616a6f54ee1061398319}{Vehicule} (const std\+::string \&p\+\_\+niv, const std\+::string \&p\+\_\+immatriculation, \hyperlink{classutil_1_1Date}{util\+::\+Date} \&p\+\_\+date\+Enregistrement)
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}un nouvel objet de la classe \hyperlink{classsaaq_1_1Vehicule}{Vehicule}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classsaaq_1_1Vehicule_a24e65619f882d26dd3f2bfee25a7b3e6}\label{classsaaq_1_1Vehicule_a24e65619f882d26dd3f2bfee25a7b3e6}} 
+virtual \hyperlink{classsaaq_1_1Vehicule}{Vehicule} $\ast$ {\bfseries clone} () const =0
+\item 
+virtual double \hyperlink{classsaaq_1_1Vehicule_a93570921069d25b6bc48cf04af176395}{tarification\+Annuelle} () const =0
+\begin{DoxyCompactList}\small\item\em Retourne la tarification annuelle du vehicule. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classsaaq_1_1Vehicule_a8a7c31860afb58614a44ba89a9ddc224}{req\+Niv} () const
+\begin{DoxyCompactList}\small\item\em Retourne le N\+IV. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classsaaq_1_1Vehicule_a2e8df437d34cc3b3e5008d5a5a819aae}{req\+Immatriculation} () const
+\begin{DoxyCompactList}\small\item\em Retourne le numéro d\textquotesingle{}immatriculation. \end{DoxyCompactList}\item 
+const \hyperlink{classutil_1_1Date}{util\+::\+Date} \hyperlink{classsaaq_1_1Vehicule_a650c5f764375e344e268391a5c3cf8b3}{req\+Date\+Enregistrement} () const
+\begin{DoxyCompactList}\small\item\em Retourne la date d\textquotesingle{}enregistrement. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classsaaq_1_1Vehicule_a9d0ff95273ecd7858cf9bd12aac359ba}{req\+Vehicule\+Formate} () const
+\begin{DoxyCompactList}\small\item\em Renvoie les informations de l\textquotesingle{}enregistrement dans un format console. \end{DoxyCompactList}\item 
+bool \hyperlink{classsaaq_1_1Vehicule_a9dd4c5e7c74ebabd5f4ce651d21d79fc}{operator==} (const \hyperlink{classsaaq_1_1Vehicule}{Vehicule} \&p\+\_\+vehicule) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur == qui permet de vérifier si la plaques et la date d\textquotesingle{}enregistrement sont identiques. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classsaaq_1_1Vehicule_a17c2ad3a6fabdf37c47811a9b0183e24}{asg\+Immatriculation} (const std\+::string \&p\+\_\+immatriculation)
+\begin{DoxyCompactList}\small\item\em Assigne une nouvelle plaque automobile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe vehicule qui contient les informations d\textquotesingle{}une plaque automobile. Contient la plaque d\textquotesingle{}immatriculation, la date d\textquotesingle{}enregistrement et le N\+IV du vehicule. Des méthode qui permettent de nous donner chaques valeurs. Une méthode qui permet d\textquotesingle{}assigner une nouvelle plaque de vehicule. Une méthode qui permet d\textquotesingle{}afficher le tout dans un format console. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsaaq_1_1Vehicule_a20f052188538616a6f54ee1061398319}\label{classsaaq_1_1Vehicule_a20f052188538616a6f54ee1061398319}} 
+\index{saaq\+::\+Vehicule@{saaq\+::\+Vehicule}!Vehicule@{Vehicule}}
+\index{Vehicule@{Vehicule}!saaq\+::\+Vehicule@{saaq\+::\+Vehicule}}
+\subsubsection{\texorpdfstring{Vehicule()}{Vehicule()}}
+{\footnotesize\ttfamily saaq\+::\+Vehicule\+::\+Vehicule (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+niv,  }\item[{const std\+::string \&}]{p\+\_\+immatriculation,  }\item[{\hyperlink{classutil_1_1Date}{util\+::\+Date} \&}]{p\+\_\+date\+Enregistrement }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}un nouvel objet de la classe \hyperlink{classsaaq_1_1Vehicule}{Vehicule}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+niv} & N\+IV du vehicule \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+immatriculation} & immatriculation du vehicule \\
+\hline
+\mbox{\tt in}  & {\em p\+\_\+date\+Enregistrement} & date d\textquotesingle{}enregistrement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+l\textquotesingle{}objet courant a été correctement créé et assigné 
+\end{DoxyPostcond}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+niv, p\+\_\+immatriculation, p\+\_\+date\+Enregistrement sont valide 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+m\+\_\+niv prend la valeur de p\+\_\+niv 
+
+m\+\_\+immatriculation prend la valeur de p\+\_\+immatriculation 
+
+m\+\_\+date\+Enregistrement prend la valeur de p\+\_\+date\+Enregistrement 
+\end{DoxyPostcond}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsaaq_1_1Vehicule_a17c2ad3a6fabdf37c47811a9b0183e24}\label{classsaaq_1_1Vehicule_a17c2ad3a6fabdf37c47811a9b0183e24}} 
+\index{saaq\+::\+Vehicule@{saaq\+::\+Vehicule}!asg\+Immatriculation@{asg\+Immatriculation}}
+\index{asg\+Immatriculation@{asg\+Immatriculation}!saaq\+::\+Vehicule@{saaq\+::\+Vehicule}}
+\subsubsection{\texorpdfstring{asg\+Immatriculation()}{asgImmatriculation()}}
+{\footnotesize\ttfamily void saaq\+::\+Vehicule\+::asg\+Immatriculation (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+immatriculation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Assigne une nouvelle plaque automobile. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+immatriculation} & est la nouvelle plaque automobile qui est valide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+immatriculation correspond a une plaque automobile valide 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+m\+\_\+immatriculation prend la veleur de p\+\_\+immatriculation 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classsaaq_1_1Vehicule_a9dd4c5e7c74ebabd5f4ce651d21d79fc}\label{classsaaq_1_1Vehicule_a9dd4c5e7c74ebabd5f4ce651d21d79fc}} 
+\index{saaq\+::\+Vehicule@{saaq\+::\+Vehicule}!operator==@{operator==}}
+\index{operator==@{operator==}!saaq\+::\+Vehicule@{saaq\+::\+Vehicule}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool saaq\+::\+Vehicule\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classsaaq_1_1Vehicule}{Vehicule} \&}]{p\+\_\+vehicule }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur == qui permet de vérifier si la plaques et la date d\textquotesingle{}enregistrement sont identiques. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+vehicule} & objet vehicule à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valeur booléene de la comparaison de la plaque et de la date d\textquotesingle{}enregistrement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaaq_1_1Vehicule_a650c5f764375e344e268391a5c3cf8b3}\label{classsaaq_1_1Vehicule_a650c5f764375e344e268391a5c3cf8b3}} 
+\index{saaq\+::\+Vehicule@{saaq\+::\+Vehicule}!req\+Date\+Enregistrement@{req\+Date\+Enregistrement}}
+\index{req\+Date\+Enregistrement@{req\+Date\+Enregistrement}!saaq\+::\+Vehicule@{saaq\+::\+Vehicule}}
+\subsubsection{\texorpdfstring{req\+Date\+Enregistrement()}{reqDateEnregistrement()}}
+{\footnotesize\ttfamily const \hyperlink{classutil_1_1Date}{util\+::\+Date} saaq\+::\+Vehicule\+::req\+Date\+Enregistrement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne la date d\textquotesingle{}enregistrement. 
+
+\begin{DoxyReturn}{Returns}
+date d\textquotesingle{}enregistrement 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaaq_1_1Vehicule_a2e8df437d34cc3b3e5008d5a5a819aae}\label{classsaaq_1_1Vehicule_a2e8df437d34cc3b3e5008d5a5a819aae}} 
+\index{saaq\+::\+Vehicule@{saaq\+::\+Vehicule}!req\+Immatriculation@{req\+Immatriculation}}
+\index{req\+Immatriculation@{req\+Immatriculation}!saaq\+::\+Vehicule@{saaq\+::\+Vehicule}}
+\subsubsection{\texorpdfstring{req\+Immatriculation()}{reqImmatriculation()}}
+{\footnotesize\ttfamily const std\+::string \& saaq\+::\+Vehicule\+::req\+Immatriculation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le numéro d\textquotesingle{}immatriculation. 
+
+\begin{DoxyReturn}{Returns}
+Le numéro d\textquotesingle{}immatriculation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaaq_1_1Vehicule_a8a7c31860afb58614a44ba89a9ddc224}\label{classsaaq_1_1Vehicule_a8a7c31860afb58614a44ba89a9ddc224}} 
+\index{saaq\+::\+Vehicule@{saaq\+::\+Vehicule}!req\+Niv@{req\+Niv}}
+\index{req\+Niv@{req\+Niv}!saaq\+::\+Vehicule@{saaq\+::\+Vehicule}}
+\subsubsection{\texorpdfstring{req\+Niv()}{reqNiv()}}
+{\footnotesize\ttfamily const std\+::string \& saaq\+::\+Vehicule\+::req\+Niv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le N\+IV. 
+
+\begin{DoxyReturn}{Returns}
+le N\+IV 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaaq_1_1Vehicule_a9d0ff95273ecd7858cf9bd12aac359ba}\label{classsaaq_1_1Vehicule_a9d0ff95273ecd7858cf9bd12aac359ba}} 
+\index{saaq\+::\+Vehicule@{saaq\+::\+Vehicule}!req\+Vehicule\+Formate@{req\+Vehicule\+Formate}}
+\index{req\+Vehicule\+Formate@{req\+Vehicule\+Formate}!saaq\+::\+Vehicule@{saaq\+::\+Vehicule}}
+\subsubsection{\texorpdfstring{req\+Vehicule\+Formate()}{reqVehiculeFormate()}}
+{\footnotesize\ttfamily std\+::string saaq\+::\+Vehicule\+::req\+Vehicule\+Formate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renvoie les informations de l\textquotesingle{}enregistrement dans un format console. 
+
+\begin{DoxyReturn}{Returns}
+Informations de la plaque automobile, son N\+IV et la date d\textquotesingle{}enregistrement 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classsaaq_1_1Camion_a7e352c9d011c145497fa19d16482bd9a}{saaq\+::\+Camion}, and \hyperlink{classsaaq_1_1VehiculePromenade_a338b22f240c47613ba08f37bf717658b}{saaq\+::\+Vehicule\+Promenade}.
+
+\mbox{\Hypertarget{classsaaq_1_1Vehicule_a93570921069d25b6bc48cf04af176395}\label{classsaaq_1_1Vehicule_a93570921069d25b6bc48cf04af176395}} 
+\index{saaq\+::\+Vehicule@{saaq\+::\+Vehicule}!tarification\+Annuelle@{tarification\+Annuelle}}
+\index{tarification\+Annuelle@{tarification\+Annuelle}!saaq\+::\+Vehicule@{saaq\+::\+Vehicule}}
+\subsubsection{\texorpdfstring{tarification\+Annuelle()}{tarificationAnnuelle()}}
+{\footnotesize\ttfamily double saaq\+::\+Vehicule\+::tarification\+Annuelle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retourne la tarification annuelle du vehicule. 
+
+\begin{DoxyReturn}{Returns}
+tarification annuelle 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsaaq_1_1Camion_af01bdc48db3cdeb3bc29c8b864ffdad8}{saaq\+::\+Camion}, and \hyperlink{classsaaq_1_1VehiculePromenade_ad94d645be9862d1cd86953ca8a7777b9}{saaq\+::\+Vehicule\+Promenade}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Vehicule_8h}{Vehicule.\+h}\item 
+\hyperlink{Vehicule_8cpp}{Vehicule.\+cpp}\end{DoxyCompactItemize}

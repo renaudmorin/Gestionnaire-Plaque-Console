@@ -1,0 +1,112 @@
+\hypertarget{validationFormat_8cpp}{}\section{validation\+Format.\+cpp File Reference}
+\label{validationFormat_8cpp}\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+
+
+Fichier permettant de valider une plaque automobile et un N\+IV.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for validation\+Format.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{validationFormat_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{validationFormat_8cpp_a54e96460aa1c34b195351e8bb3cffeef}{util\+::valider\+Immatriculation} (const std\+::string \&p\+\_\+immatriculation)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de valider le format dune plaque dimmatriculation. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a7d9e1cb34ea051b7bb3203e0045ae3a3}{util\+::valider\+Niv} (const std\+::string \&p\+\_\+niv)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de valider le format dun N\+IV. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a4cf20d6bfbd40c3a521faafe28f1edde}{util\+::valider\+Immatriculation\+Camion} (const std\+::string \&p\+\_\+immatriculation)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de valider le format dune plaque d\textquotesingle{}immatriculation de camion. \end{DoxyCompactList}\item 
+bool \hyperlink{validationFormat_8cpp_a7bdc44b565fc0da4d7244670d00ce416}{util\+::valider\+Immatriculation\+Promenade} (const std\+::string \&p\+\_\+immatriculation)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de valider le format dune plaque d\textquotesingle{}immatriculation de promenade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichier permettant de valider une plaque automobile et un N\+IV. 
+
+\begin{DoxyDate}{Date}
+2019-\/10-\/15 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Renaud Morin 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a54e96460aa1c34b195351e8bb3cffeef}\label{validationFormat_8cpp_file_a54e96460aa1c34b195351e8bb3cffeef}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Immatriculation@{valider\+Immatriculation}}
+\index{valider\+Immatriculation@{valider\+Immatriculation}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Immatriculation()}{validerImmatriculation()}}
+{\footnotesize\ttfamily bool util\+::valider\+Immatriculation (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+immatriculation }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de valider le format dune plaque dimmatriculation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+immatriculation} & numero de plaque a verifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valeur booléenne selon la validité de la plaque automobile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a4cf20d6bfbd40c3a521faafe28f1edde}\label{validationFormat_8cpp_file_a4cf20d6bfbd40c3a521faafe28f1edde}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Immatriculation\+Camion@{valider\+Immatriculation\+Camion}}
+\index{valider\+Immatriculation\+Camion@{valider\+Immatriculation\+Camion}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Immatriculation\+Camion()}{validerImmatriculationCamion()}}
+{\footnotesize\ttfamily bool util\+::valider\+Immatriculation\+Camion (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+immatriculation }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de valider le format dune plaque d\textquotesingle{}immatriculation de camion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+immatriculation} & numero de plaque a verifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valeur booléenne selon la validité de la plaque de camion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a7bdc44b565fc0da4d7244670d00ce416}\label{validationFormat_8cpp_file_a7bdc44b565fc0da4d7244670d00ce416}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Immatriculation\+Promenade@{valider\+Immatriculation\+Promenade}}
+\index{valider\+Immatriculation\+Promenade@{valider\+Immatriculation\+Promenade}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Immatriculation\+Promenade()}{validerImmatriculationPromenade()}}
+{\footnotesize\ttfamily bool util\+::valider\+Immatriculation\+Promenade (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+immatriculation }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de valider le format dune plaque d\textquotesingle{}immatriculation de promenade. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+immatriculation} & numero de plaque a verifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valeur booléenne selon la validité de la plaque de vehicule de promenade 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validationFormat_8cpp_file_a7d9e1cb34ea051b7bb3203e0045ae3a3}\label{validationFormat_8cpp_file_a7d9e1cb34ea051b7bb3203e0045ae3a3}} 
+\index{validation\+Format.\+cpp@{validation\+Format.\+cpp}!valider\+Niv@{valider\+Niv}}
+\index{valider\+Niv@{valider\+Niv}!validation\+Format.\+cpp@{validation\+Format.\+cpp}}
+\subsubsection{\texorpdfstring{valider\+Niv()}{validerNiv()}}
+{\footnotesize\ttfamily bool util\+::valider\+Niv (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+niv }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de valider le format dun N\+IV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+niv} & numero, N\+IV a verifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valeur booléenne selon la validité du N\+IV 
+\end{DoxyReturn}

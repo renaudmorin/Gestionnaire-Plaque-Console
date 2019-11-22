@@ -1,0 +1,15 @@
+17:10:41 **** Incremental Build of configuration Debug for project Vehicule_Testeur ****
+make all 
+Building file: ../Vehicule_Testeur.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -I"/home/etudiant/Bureau/TP3_Final/source" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Vehicule_Testeur.d" -MT"Vehicule_Testeur.o" -o "Vehicule_Testeur.o" "../Vehicule_Testeur.cpp"
+Finished building: ../Vehicule_Testeur.cpp
+ 
+Building target: Vehicule_Testeur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/TP3_Final/source/Debug" -o "Vehicule_Testeur"  ./Vehicule_Testeur.o   -lgtest -lgtest_main -lsource -lpthread
+Finished building target: Vehicule_Testeur
+ 
+
+17:10:42 Build Finished (took 1s.648ms)
+

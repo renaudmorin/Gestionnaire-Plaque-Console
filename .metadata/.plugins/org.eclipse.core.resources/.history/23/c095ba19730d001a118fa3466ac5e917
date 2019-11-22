@@ -1,0 +1,86 @@
+/*
+ * Proprietaire_Testeur.cpp
+ *
+ *  Created on: Nov 22, 2019
+ *      Author: etudiant
+ */
+#include <gtest/gtest.h>
+#include "Proprietaire.h"
+using namespace std;
+using namespace saaq;
+
+/**
+ * \brief Test du Constructeur Proprietaire(string p_nom , string p_prenom)
+ *        cas valide: "nom", "prenom"
+ *        cas invalides:
+ *                    p_nom vide
+ *                    p_prenom vide
+ */
+TEST(Proprietaire, ConstructeurAvecParametres)
+{
+	Proprietaire testProprietaire("Renaud", "Morin");
+	ASSERT_EQ("Renaud", testProprietaire.reqNom());
+	ASSERT_EQ("Morin", testProprietaire.reqPrenom());
+}
+
+/**
+ * \brief Test du Constructeur avec p_nom invalide
+ *        cas valide: p_nom non vide
+ *        cas invalides:
+ *                    p_nom vide
+ *
+ */
+TEST(Proprietaire, ConstructeurP_nomInvalide)
+{
+	ASSERT_THROW(Proprietaire testProprietaire("", "Morin"), PreconditionException);
+}
+
+/**
+ * \brief Test du Constructeur avec p_prenom invalide
+ *        cas valide: p_prenom non vide
+ *        cas invalides:
+ *                    p_prenom vide
+ *
+ */
+TEST(Proprietaire, ConstructeurP_prenomInvalide)
+{
+	ASSERT_THROW(Proprietaire testProprietaire("Renaud", ""), PreconditionException);
+}
+
+/**
+ * \test Test de la méthode reqProprietaireFormate()
+ *
+ *     Cas valide: vérifier le retour des informations sur le proprietaire
+ *     Cas invalide: pas bon restltat
+ */
+TEST(Proprietaire, reqProprietaireFormate)
+{
+	string nom = "nom";
+	string prenom = "prenom";
+	Proprietaire testProprietaire(nom,prenom);
+
+	ostringstream os;
+	os << "Club : " << nomClub << endl;
+	os << "---------------------" << endl;
+
+	ASSERT_EQ(os.str(), annuaire.reqAnnuaireFormate());
+}
+
+
+
+
+/**
+ * \class ProprietaireValide
+ * \brief création d'un objet Proprietaire pour les tests unitaire
+ */
+class ProprietaireValide: public ::testing::Test
+{
+public:
+	ProprietaireValide() : t_Proprietaire("Renaud", "Morin")
+    {
+    };
+	Proprietaire t_Proprietaire;
+};
+
+
+

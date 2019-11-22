@@ -1,0 +1,10 @@
+17:10:37 **** Incremental Build of configuration Debug for project VehiculePromenade_Testeur ****
+make all 
+Building target: VehiculePromenade_Testeur
+Invoking: GCC C++ Linker
+g++ -L"/home/etudiant/Bureau/TP3_Final/source/Debug" -o "VehiculePromenade_Testeur"  ./VehiculePromenade_Testeur.o   -lgtest -lgtest_main -lsource -lpthread
+Finished building target: VehiculePromenade_Testeur
+ 
+
+17:10:38 Build Finished (took 933ms)
+

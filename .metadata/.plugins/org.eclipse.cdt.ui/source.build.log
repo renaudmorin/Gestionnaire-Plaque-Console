@@ -1,0 +1,16 @@
+16:53:56 **** Incremental Build of configuration Debug for project source ****
+make all 
+Building file: ../Camion.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Camion.d" -MT"Camion.o" -o "Camion.o" "../Camion.cpp"
+Finished building: ../Camion.cpp
+ 
+Building target: libsource.a
+Invoking: GCC Archiver
+ar -r  "libsource.a"  ./Camion.o ./ContratException.o ./Date.o ./Proprietaire.o ./Vehicule.o ./VehiculePromenade.o ./validationFormat.o   
+ar: creating libsource.a
+Finished building target: libsource.a
+ 
+
+16:53:57 Build Finished (took 1s.88ms)
+

@@ -1,0 +1,40 @@
+/*
+ * Proprietaire_Testeur.cpp
+ *
+ *  Created on: Nov 22, 2019
+ *      Author: etudiant
+ */
+#include <gtest/gtest.h>
+#include "Proprietaire.h"
+using namespace std;
+using namespace saaq;
+
+/**
+ * \brief Test du Constructeur Proprietaire(string p_nom , string p_prenom)
+ *        cas valide: "nom", "prenom"
+ *        cas invalides:
+ *                    p_nom vide
+ *                    p_prenom vide
+ */
+TEST(Proprietaire, ConstructeurAvecParametres)
+{
+	Proprietaire testProprietaire("Renaud", "Morin");
+	ASSERT_EQ("Renaud", testProprietaire.reqNom());
+	ASSERT_EQ("Morin", testProprietaire.reqPrenom());
+}
+
+/**
+ * \class ProprietaireValide
+ * \brief création d'un objet Proprietaire pour les tests unitaire
+ */
+class ProprietaireValide: public ::testing::Test
+{
+public:
+	ProprietaireValide() : t_Proprietaire("Renaud", "Morin")
+    {
+    };
+	Proprietaire t_Proprietaire;
+};
+
+
+

@@ -1,0 +1,53 @@
+/*
+ * Camion_Testeur.cpp
+ *
+ *  Created on: Nov 22, 2019
+ *      Author: etudiant
+ */
+#include <gtest/gtest.h>
+#include "Camion.h"
+using namespace saaq;
+using namespace std;
+util::Date uneDate;
+
+/**
+ * \brief Test du Constructeur Camion(int p_poids, int p_nbEssieux, std::string& p_niv, std::string p_immatriculation, util::Date& p_dateEnregistrement);
+ *        cas valide:
+ *				      p_poids > 3000
+ *				      p_nbEssieux >=2
+ *				      p_immatriculation valide
+ *        cas invalides:
+ *        			  p_poids <=3000
+ *                    p_nbEssieux <2
+ *
+ */
+TEST(Camion, ConstructeurAvecParametreValide)
+{
+	Camion testCamion(3500, 7, "3VWFE21C04M000001", "L000000", uneDate);
+	ASSERT_EQ(3500, testCamion.reqPoids());
+	ASSERT_EQ(7, testCamion.req_NbEssieux());
+	ASSERT_EQ("L000000",testCamion.reqImmatriculation());
+	ASSERT_EQ(true, util::Date::validerDate(uneDate.reqJour(), uneDate.reqMois(), uneDate.reqAnnee()));
+}
+
+/**
+ * \brief Test du poid invalide du Camion
+ *        cas invalides:
+ *                     p_poids <=3000
+ */
+TEST(Camion, ConstructeurAvecPoidInvalide)
+{
+	ASSERT_THROW(Camion testCamion(0, 7, "3VWFE21C04M000001", "IFT 006", uneDate), PreconditionException);
+}
+
+/**
+ * \brief Test du nombre d'essieux invalide du Camion
+ *        cas invalides:
+ *                     p_nbEssieux <=2
+ */
+TEST(Camion, ConstructeurAvecEssieuxInvalide)
+{
+	ASSERT_THROW(Camion testCamion(3500, 1, "3VWFE21C04M000001", "IFT 006", uneDate), PreconditionException);
+}
+
+

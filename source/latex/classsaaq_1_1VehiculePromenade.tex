@@ -1,0 +1,145 @@
+\hypertarget{classsaaq_1_1VehiculePromenade}{}\section{saaq\+:\+:Vehicule\+Promenade Class Reference}
+\label{classsaaq_1_1VehiculePromenade}\index{saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}}
+
+
+Classe \hyperlink{classsaaq_1_1VehiculePromenade}{Vehicule\+Promenade} qui contient les informations sur un \hyperlink{classsaaq_1_1Vehicule}{Vehicule} de Promenade Contient la plaque d\textquotesingle{}immatriculation, la date d\textquotesingle{}enregistrement, le nombre de place et le N\+IV du vehicule. Des méthode qui permettent de nous donner chaques valeurs. Une méthode qui permet d\textquotesingle{}assigner une nouvelle plaque de \hyperlink{classsaaq_1_1Vehicule}{Vehicule} de Promenade. Une méthode qui permet d\textquotesingle{}afficher le tout dans un format console.  
+
+
+
+
+{\ttfamily \#include $<$Vehicule\+Promenade.\+h$>$}
+
+
+
+Inheritance diagram for saaq\+:\+:Vehicule\+Promenade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classsaaq_1_1VehiculePromenade__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for saaq\+:\+:Vehicule\+Promenade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classsaaq_1_1VehiculePromenade__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsaaq_1_1VehiculePromenade_a5caaa3fa80ced57a49922fa44a127800}\label{classsaaq_1_1VehiculePromenade_a5caaa3fa80ced57a49922fa44a127800}} 
+{\bfseries Vehicule\+Promenade} (const int p\+\_\+nb\+Places, const std\+::string \&p\+\_\+niv, const std\+::string p\+\_\+immatriculation, \hyperlink{classutil_1_1Date}{util\+::\+Date} \&p\+\_\+date\+Enregistrement)
+\item 
+const int \hyperlink{classsaaq_1_1VehiculePromenade_a71338b24fa5d12cc432b7f7d29917b75}{req\+\_\+nb\+Places} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de place du vehicule de promenade. \end{DoxyCompactList}\item 
+void \hyperlink{classsaaq_1_1VehiculePromenade_a86cbcf72ff776c5e79dcfd9703d7121e}{asg\+Immatriculation} (const std\+::string \&p\+\_\+immatriculation)
+\begin{DoxyCompactList}\small\item\em Assigne une nouvelle plaque automobile de promenade. \end{DoxyCompactList}\item 
+double \hyperlink{classsaaq_1_1VehiculePromenade_ad94d645be9862d1cd86953ca8a7777b9}{tarification\+Annuelle} () const
+\begin{DoxyCompactList}\small\item\em Retourne la tarification Annuelle du vehicule de promenade. \end{DoxyCompactList}\item 
+virtual \hyperlink{classsaaq_1_1Vehicule}{Vehicule} $\ast$ \hyperlink{classsaaq_1_1VehiculePromenade_ac4dc7715d78c2c0aca03c0eb5818bf4a}{clone} () const
+\begin{DoxyCompactList}\small\item\em Retourne un clone de l\textquotesingle{}objet \hyperlink{classsaaq_1_1VehiculePromenade}{Vehicule\+Promenade}. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classsaaq_1_1VehiculePromenade_a338b22f240c47613ba08f37bf717658b}{req\+Vehicule\+Formate} () const
+\begin{DoxyCompactList}\small\item\em Retourne une string contenant les informations contenues pour un \hyperlink{classsaaq_1_1Vehicule}{Vehicule} de Promenade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe \hyperlink{classsaaq_1_1VehiculePromenade}{Vehicule\+Promenade} qui contient les informations sur un \hyperlink{classsaaq_1_1Vehicule}{Vehicule} de Promenade Contient la plaque d\textquotesingle{}immatriculation, la date d\textquotesingle{}enregistrement, le nombre de place et le N\+IV du vehicule. Des méthode qui permettent de nous donner chaques valeurs. Une méthode qui permet d\textquotesingle{}assigner une nouvelle plaque de \hyperlink{classsaaq_1_1Vehicule}{Vehicule} de Promenade. Une méthode qui permet d\textquotesingle{}afficher le tout dans un format console. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsaaq_1_1VehiculePromenade_a86cbcf72ff776c5e79dcfd9703d7121e}\label{classsaaq_1_1VehiculePromenade_a86cbcf72ff776c5e79dcfd9703d7121e}} 
+\index{saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}!asg\+Immatriculation@{asg\+Immatriculation}}
+\index{asg\+Immatriculation@{asg\+Immatriculation}!saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}}
+\subsubsection{\texorpdfstring{asg\+Immatriculation()}{asgImmatriculation()}}
+{\footnotesize\ttfamily void saaq\+::\+Vehicule\+Promenade\+::asg\+Immatriculation (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p\+\_\+immatriculation }\end{DoxyParamCaption})}
+
+
+
+Assigne une nouvelle plaque automobile de promenade. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p\+\_\+immatriculation} & est la nouvelle plaque automobile de promenade qui est valide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+p\+\_\+immatriculation correspond a une plaque automobile valide 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+m\+\_\+immatriculation prend la veleur de p\+\_\+immatriculation 
+
+p\+\_\+immatriculation est valide 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classsaaq_1_1VehiculePromenade_ac4dc7715d78c2c0aca03c0eb5818bf4a}\label{classsaaq_1_1VehiculePromenade_ac4dc7715d78c2c0aca03c0eb5818bf4a}} 
+\index{saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}!clone@{clone}}
+\index{clone@{clone}!saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \hyperlink{classsaaq_1_1Vehicule}{Vehicule} $\ast$ saaq\+::\+Vehicule\+Promenade\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne un clone de l\textquotesingle{}objet \hyperlink{classsaaq_1_1VehiculePromenade}{Vehicule\+Promenade}. 
+
+\begin{DoxyReturn}{Returns}
+une copie de \hyperlink{classsaaq_1_1VehiculePromenade}{Vehicule\+Promenade} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsaaq_1_1Vehicule}{saaq\+::\+Vehicule}.
+
+\mbox{\Hypertarget{classsaaq_1_1VehiculePromenade_a71338b24fa5d12cc432b7f7d29917b75}\label{classsaaq_1_1VehiculePromenade_a71338b24fa5d12cc432b7f7d29917b75}} 
+\index{saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}!req\+\_\+nb\+Places@{req\+\_\+nb\+Places}}
+\index{req\+\_\+nb\+Places@{req\+\_\+nb\+Places}!saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}}
+\subsubsection{\texorpdfstring{req\+\_\+nb\+Places()}{req\_nbPlaces()}}
+{\footnotesize\ttfamily const int saaq\+::\+Vehicule\+Promenade\+::req\+\_\+nb\+Places (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le nombre de place du vehicule de promenade. 
+
+\begin{DoxyReturn}{Returns}
+le nombre de place du vehicule de promenade 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaaq_1_1VehiculePromenade_a338b22f240c47613ba08f37bf717658b}\label{classsaaq_1_1VehiculePromenade_a338b22f240c47613ba08f37bf717658b}} 
+\index{saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}!req\+Vehicule\+Formate@{req\+Vehicule\+Formate}}
+\index{req\+Vehicule\+Formate@{req\+Vehicule\+Formate}!saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}}
+\subsubsection{\texorpdfstring{req\+Vehicule\+Formate()}{reqVehiculeFormate()}}
+{\footnotesize\ttfamily std\+::string saaq\+::\+Vehicule\+Promenade\+::req\+Vehicule\+Formate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne une string contenant les informations contenues pour un \hyperlink{classsaaq_1_1Vehicule}{Vehicule} de Promenade. 
+
+\begin{DoxyReturn}{Returns}
+informations de \hyperlink{classsaaq_1_1VehiculePromenade}{Vehicule\+Promenade} 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classsaaq_1_1Vehicule_a9d0ff95273ecd7858cf9bd12aac359ba}{saaq\+::\+Vehicule}.
+
+\mbox{\Hypertarget{classsaaq_1_1VehiculePromenade_ad94d645be9862d1cd86953ca8a7777b9}\label{classsaaq_1_1VehiculePromenade_ad94d645be9862d1cd86953ca8a7777b9}} 
+\index{saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}!tarification\+Annuelle@{tarification\+Annuelle}}
+\index{tarification\+Annuelle@{tarification\+Annuelle}!saaq\+::\+Vehicule\+Promenade@{saaq\+::\+Vehicule\+Promenade}}
+\subsubsection{\texorpdfstring{tarification\+Annuelle()}{tarificationAnnuelle()}}
+{\footnotesize\ttfamily double saaq\+::\+Vehicule\+Promenade\+::tarification\+Annuelle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Retourne la tarification Annuelle du vehicule de promenade. 
+
+\begin{DoxyReturn}{Returns}
+la tarification Annuelle du vehicule de promenade 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsaaq_1_1Vehicule_a93570921069d25b6bc48cf04af176395}{saaq\+::\+Vehicule}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{VehiculePromenade_8h}{Vehicule\+Promenade.\+h}\item 
+\hyperlink{VehiculePromenade_8cpp}{Vehicule\+Promenade.\+cpp}\end{DoxyCompactItemize}
